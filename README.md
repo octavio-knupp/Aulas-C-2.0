@@ -24,3 +24,19 @@ Console.WriteLine($"As notas são {nota1} | {nota2}");
 
 double media = (nota1 + nota2) / 2;
 Console.WriteLine($"A média das notas é {media}");
+
+
+Console.Write("Digite um número: ");
+int n1 = int.Parse(Console.ReadLine());
+
+int i = 1;
+int r = 0;
+while (i <= 10)
+{
+    r = n1 * i;
+    Console.WriteLine($"{n1} X {i} = {r}");
+    i++;
+ 
+}
+
+
