@@ -1,0 +1,20 @@
+Console.WriteLine("Octavio Henrique Knupp Lucio");
+Console.WriteLine("Nicolas Joly Mussi ");
+Console.WriteLine("Eduardo da Cunha");
+
+Console.Write("Digite o ano: ");
+int ano = int.Parse(Console.ReadLine());
+
+if (ano % 400 == 0)
+{
+    Console.WriteLine($"O ano {ano} é Bissexto");
+}
+else if (ano % 4 == 0 && ano % 100 != 0)
+{
+    Console.WriteLine($"O ano {ano} é Bissexto");
+}
+else 
+{
+    Console.WriteLine($"O ano {ano} não é Bissexto");
+}
+    Console.ReadKey();
