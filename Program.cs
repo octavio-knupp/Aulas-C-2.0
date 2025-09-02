@@ -20,3 +20,55 @@ Console.WriteLine("Média das notas: "+media);
 Console.ReadKey();
 
 //próxima aula 
+
+//void SomarDoisValores(int a, int b)
+//{
+//    //int a = 20;
+//    //int b = 35;
+//    int soma = a + b;
+//    Console.Write($"A soma de {a} e {b} é igual a {soma}");
+//}
+//SomarDoisValores(8889,5565);
+//SomarDoisValores(8889, 10000000);
+//hardcode
+
+
+
+int SomarDoisValores(int valor1, int valor2)
+{
+    int soma = valor1 + valor2;
+    return soma;
+}
+int SubtrairDoisValores(int valor1, int valor2)
+{
+    int sub = valor1 - valor2;
+    return sub;
+}
+int SolicitarValorInteiro()
+{
+    Console.WriteLine("Digite: ");
+    string texto = Console.ReadLine();
+    int.TryParse(texto, out int valor);
+    return valor;
+}
+void Calcular()
+{
+    Console.WriteLine("Digite (+-*/) :");
+    string operador = Console.ReadLine();
+
+    int valor1 = SolicitarValorInteiro();
+    int valor2 = SolicitarValorInteiro();
+    int res = 0;
+    switch (operador)
+    {
+        case "+": res = SomarDoisValores(valor1, valor2); break;
+        case "-": res = SubtrairDoisValores(valor1, valor2); break;
+        default: Console.WriteLine($"Operacao invalida");  break;
+    }
+    Console.WriteLine($"Resultado: {res}");
+}
+Calcular();
+
+
+
+
