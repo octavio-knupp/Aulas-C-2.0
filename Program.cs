@@ -34,31 +34,31 @@ Console.ReadKey();
 
 
 
-int SomarDoisValores(int valor1, int valor2)
+double SomarDoisValores(double valor1, double valor2)
 {
-    int soma = valor1 + valor2;
+    double soma = valor1 + valor2;
     return soma;
 }
-int SubtrairDoisValores(int valor1, int valor2)
+double SubtrairDoisValores(double valor1, double valor2)
 {
-    int sub = valor1 - valor2;
+    double sub = valor1 - valor2;
     return sub;
 }
-int MultiplicarValores( int valor1, int valor2)
+double MultiplicarValores(double valor1, double valor2)
 {
-    int mult = valor1 * valor2;
+    double mult = valor1 * valor2;
     return mult;
 }
-int DividirValores(int valor1, int valor2)
+double DividirValores(double valor1, double valor2)
 {
-    int div = valor1 / valor2;
+    double div = valor1 / valor2;
     return div;
 }
-int SolicitarValorInteiro()
+double SolicitarValorInteiro()
 {
     Console.WriteLine("Digite: ");
     string texto = Console.ReadLine();
-    int.TryParse(texto, out int valor) ;
+    double.TryParse(texto, out double valor);
     return valor;
 }
 
@@ -66,22 +66,22 @@ string SolicitarOperador()
 {
     Console.WriteLine("Digite (+-*/) :");
     string operador = Console.ReadLine();
-    return operador??"";
+    return operador ?? "";
 }
 void Calcular()
 {
-    
+
     string operador = SolicitarOperador();
-    int valor1 = SolicitarValorInteiro();
-    int valor2 = SolicitarValorInteiro();
-    int res = 0;
+    double valor1 = SolicitarValorInteiro();
+    double valor2 = SolicitarValorInteiro();
+    double res = 0;
     switch (operador)
     {
         case "+": res = SomarDoisValores(valor1, valor2); break;
         case "-": res = SubtrairDoisValores(valor1, valor2); break;
-        case "*": res = MultiplicarValores(valor1, valor2);break;
+        case "*": res = MultiplicarValores(valor1, valor2); break;
         case "/": res = DividirValores(valor1, valor2); break;
-        default: Console.WriteLine($"Operacao invalida");  break;
+        default: Console.WriteLine($"Operacao invalida"); break;
     }
     Console.WriteLine($"Resultado: {res}");
 }
