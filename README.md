@@ -40,3 +40,44 @@ while (i <= 10)
 }
 
 
+
+# // Trabalhando com Vetores - Arrays (mesma coisa) estrutura que recebe mais de um valor. (new = instânciar )
+// valor [10] [20] [30]
+//indice   0    1    2
+
+int[] nums = new int[3];
+char letra = '1';
+string letras = "abc";
+
+
+Console.WriteLine($"Valor: {nums[0]}");
+Console.WriteLine($"Valor: {nums[0]}");
+Console.WriteLine($"Valor: {nums[2]}");
+
+nums[0] = 10;
+nums[1] = 20;
+nums[2] = 30;
+
+Console.WriteLine($"Valor: {nums[0]}");
+Console.WriteLine($"Valor: {nums[0]}");
+Console.WriteLine($"Valor: {nums[2]}");
+
+int iw = 0;//inicio
+
+while( iw < nums.Length)//condicao (quando não sabe a quantidade)
+{
+    Console.WriteLine($"{iw}: {nums[2]}");
+    iw++;//incremento 
+}
+
+for(int i = 0; i < nums.Length; i++)// quando se sabe a quantidade 
+{
+    Console.WriteLine($"{i}: {nums[i]}");
+}
+foreach(var num in nums)
+{
+    Console.WriteLine($"{num}");
+}
+
+
+
