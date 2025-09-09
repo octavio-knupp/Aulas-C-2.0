@@ -74,10 +74,20 @@ for(int i = 0; i < nums.Length; i++)// quando se sabe a quantidade
 {
     Console.WriteLine($"{i}: {nums[i]}");
 }
+
+int soma = 0;
+int media = soma / nums.Length;
+
 foreach(var num in nums)
 {
+    soma += num;
+    media += num / 3;
+
     Console.WriteLine($"{num}");
 }
+Console.WriteLine($"soma: {soma} ");
+Console.WriteLine($"media: {media}");
+// mostrem a soma e a média dos itens do array 
 
 
 
