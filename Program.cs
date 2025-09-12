@@ -34,6 +34,9 @@ Console.ReadKey();
 
 
 
+Console.WriteLine("Octavio Henrique Knupp Lucio ");
+Console.WriteLine("Nícolas Joly Mussi");
+Console.WriteLine("Eduardo da Cunha");
 double SomarDoisValores(double valor1, double valor2)
 {
     double soma = valor1 + valor2;
